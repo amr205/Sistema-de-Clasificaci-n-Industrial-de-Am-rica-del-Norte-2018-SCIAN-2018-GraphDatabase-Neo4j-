@@ -71,7 +71,7 @@
             {
               "name": "Título",
               "type": "string",
-              "sample": "Agricultura; cría y explotación de animales; aprovechamiento forestal; pesca y cazaT ",
+              "sample": "Agricultura; cría y explotación de animales; aprovechamiento forestal; pesca y caza",
               "include": true
             },
             {
@@ -107,6 +107,12 @@
               "name": "Código sector",
               "type": "string",
               "sample": "11",
+              "include": true
+            },
+            {
+              "name": "Título",
+              "type": "string",
+              "sample": "Agricultura",
               "include": true
             },
             {
@@ -153,7 +159,7 @@
             {
               "name": "Descripción",
               "type": "string",
-              "sample": " leguminosas y cerealesT ",
+              "sample": " leguminosas y cereales",
               "include": true
             },
             {
@@ -188,7 +194,7 @@
             {
               "name": "Título",
               "type": "string",
-              "sample": "Cultivo de soyaT ",
+              "sample": "Cultivo de soya",
               "include": true
             },
             {
@@ -264,6 +270,11 @@
               "identifier": "GIaKsPOZb_gs-8yrx0EdS"
             },
             {
+              "property": "title",
+              "type": "string",
+              "identifier": "NsNsNOCsOigmEvESvn3Fx"
+            },
+            {
               "property": "description",
               "type": "string",
               "identifier": "rkGV4R8vXXfAwdpbeu0tg"
@@ -278,6 +289,7 @@
               "type": "string",
               "identifier": "2z1ParhvnD3l_-x5iQWHU"
             }
+            
           ],
           "key": {
             "properties": [
@@ -422,6 +434,9 @@
             },
             {
               "field": "Excluye"
+            },
+            {
+              "field": "Título"
             }
           ]
         },
