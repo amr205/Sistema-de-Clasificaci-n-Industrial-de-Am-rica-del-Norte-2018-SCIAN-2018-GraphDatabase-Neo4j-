@@ -1,0 +1,523 @@
+{
+  "version": "0.4.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -226,
+          "y": -120
+        },
+        "caption": "Sector"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": -29,
+          "y": -120
+        },
+        "caption": "SubSector"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": 168,
+          "y": -120
+        },
+        "caption": "Branch"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": 168,
+          "y": -317
+        },
+        "caption": "SubBranch"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "IS_PART_OF",
+        "fromId": "n1",
+        "toId": "n0"
+      },
+      {
+        "id": "n1",
+        "type": "IS_PART_OF",
+        "fromId": "n2",
+        "toId": "n1"
+      },
+      {
+        "id": "n2",
+        "type": "IS_PART_OF",
+        "fromId": "n3",
+        "toId": "n2"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "scian_sector.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "Código",
+              "type": "string",
+              "sample": "11",
+              "include": true
+            },
+            {
+              "name": "Título",
+              "type": "string",
+              "sample": "Agricultura; cría y explotación de animales; aprovechamiento forestal; pesca y cazaT ",
+              "include": true
+            },
+            {
+              "name": "Descripción",
+              "type": "string",
+              "sample": "Este sector comprende unidades económicas dedicadas principalmente a la siembra; cultivo y cosecha de especies vegetales; a la cría y explotación de animales en ambientes controlados; al cuidado; aprovechamiento y recolección de recursos forestales; a la pesca; caza y captura de animales; así como a la realización de actividades de apoyo relacionadas con el sector; entre ellas cabe señalar el beneficio de algodón.  Este sector; que se caracteriza por el aprovechamiento de especies vegetales y animales; difiere de los otros sectores por el carácter biológico de su producción y su dependencia directa de las condiciones del clima; suelo y agua en gran parte de sus actividades; y por las condiciones particulares de su estructura productiva. Los procesos productivos varían de acuerdo con el tipo de especie vegetal o animal de que se trate; abarcan una o más de las siguientes etapas: cultivo; cría y explotación; o corte y recolección de la especie; hasta el momento en que se realiza la venta del producto a pie de finca.",
+              "include": true
+            },
+            {
+              "name": "Incluye",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Excluye",
+              "type": "string",
+              "sample": "Excluye: u.e.d.p. a proporcionar el servicio de riego agrícola (22; Generación; transmisión; distribución y comercialización de energía eléctrica; suministro de agua y de gas natural por ductos al consumidor final); al alquiler de equipo de construcción con operador para actividades de desmonte (23; Construcción); al beneficio de tabaco; arroz; cacao; café; té; a la deshidratación de frutas y verduras; a la pasteurización; homogeneización y envasado de miel (31-33; Industrias manufactureras); a la compra-venta de productos agrícolas y a la compra-venta de animales (43; Comercio al por mayor; 46; Comercio al por menor); al alquiler de maquinaria y equipo para construcción sin operador (53; Servicios inmobiliarios y de alquiler de bienes muebles e intangibles); a proporcionar servicios de investigación; servicios veterinarios; servicios de consultoría técnica agropecuaria o forestal (54; Servicios profesionales; científicos y técnicos); a proveer personal propio no agrícola a otras unidades económicas para apoyar o complementar la fuerza de trabajo de éstas por un tiempo determinado; a los servicios de instalación y mantenimiento de áreas verdes en interiores y exteriores de inmuebles; a los servicios de empacado y etiquetado de productos no agrícolas propiedad de terceros (56; Servicios de apoyo a los negocios y manejo de residuos; y servicios de remediación); a la exhibición de animales salvajes vivos; a hacer posible el acceso del público a zonas naturales; como reservas naturales y santuarios de animales; a proporcionar servicios recreativos en clubes o ligas de aficionados a la pesca (71; Servicios de esparcimiento culturales y deportivos; y otros servicios recreativos); y al servicio de pensiones para mascotas (81; Otros servicios excepto actividades gubernamentales).",
+              "include": true
+            }
+          ]
+        },
+        "scian_subsector.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "Código",
+              "type": "string",
+              "sample": "111",
+              "include": true
+            },
+            {
+              "name": "Código sector",
+              "type": "string",
+              "sample": "11",
+              "include": true
+            },
+            {
+              "name": "Descripción",
+              "type": "string",
+              "sample": "Unidades económicas dedicadas principalmente a las actividades relacionadas con la explotación de especies vegetales cultivadas en terrenos",
+              "include": true
+            },
+            {
+              "name": "Incluye",
+              "type": "string",
+              "sample": " predios",
+              "include": true
+            },
+            {
+              "name": "Excluye",
+              "type": "string",
+              "sample": " parcelas",
+              "include": true
+            }
+          ]
+        },
+        "scian_rama.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "Código",
+              "type": "string",
+              "sample": "1111",
+              "include": true
+            },
+            {
+              "name": "código subsector",
+              "type": "string",
+              "sample": "111",
+              "include": true
+            },
+            {
+              "name": "Título",
+              "type": "string",
+              "sample": "Cultivo de semillas oleaginosas",
+              "include": true
+            },
+            {
+              "name": "Descripción",
+              "type": "string",
+              "sample": " leguminosas y cerealesT ",
+              "include": true
+            },
+            {
+              "name": "Incluye",
+              "type": "string",
+              "sample": "Unidades económicas dedicadas principalmente a la siembra y cultivo de semillas oleaginosas",
+              "include": true
+            },
+            {
+              "name": "Excluye",
+              "type": "string",
+              "sample": " como soya",
+              "include": true
+            }
+          ]
+        },
+        "scian_subrama.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "Código",
+              "type": "string",
+              "sample": "11111",
+              "include": true
+            },
+            {
+              "name": "Código rama",
+              "type": "string",
+              "sample": "1111",
+              "include": true
+            },
+            {
+              "name": "Título",
+              "type": "string",
+              "sample": "Cultivo de soyaT ",
+              "include": true
+            },
+            {
+              "name": "Descripción",
+              "type": "string",
+              "sample": "Véase la descripción de la categoría 111110.",
+              "include": true
+            },
+            {
+              "name": "Incluye",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "Excluye",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Sector",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "code",
+              "type": "string",
+              "identifier": "b_DzSwfGRtLJF86yAzPO2"
+            },
+            {
+              "property": "title",
+              "type": "string",
+              "identifier": "s4NwVgYmg5XOVoJgABe9l"
+            },
+            {
+              "property": "description",
+              "type": "string",
+              "identifier": "nCngbgjR_vE4OaqQs0T5A"
+            },
+            {
+              "property": "includes",
+              "type": "string",
+              "identifier": "nSit0XqyaFMqMjrlDahBp"
+            },
+            {
+              "property": "excludes",
+              "type": "string",
+              "identifier": "BRLLDIb1dGuqPhzZ6ZGWX"
+            }
+          ],
+          "key": {
+            "properties": [
+              "b_DzSwfGRtLJF86yAzPO2"
+            ],
+            "name": ""
+          }
+        },
+        "n1": {
+          "label": "SubSector",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "code",
+              "type": "string",
+              "identifier": "GIaKsPOZb_gs-8yrx0EdS"
+            },
+            {
+              "property": "description",
+              "type": "string",
+              "identifier": "rkGV4R8vXXfAwdpbeu0tg"
+            },
+            {
+              "property": "includes",
+              "type": "string",
+              "identifier": "oQ0oUZtzwsVpg6vQBK0xQ"
+            },
+            {
+              "property": "excludes",
+              "type": "string",
+              "identifier": "2z1ParhvnD3l_-x5iQWHU"
+            }
+          ],
+          "key": {
+            "properties": [
+              "GIaKsPOZb_gs-8yrx0EdS"
+            ],
+            "name": ""
+          }
+        },
+        "n2": {
+          "label": "Branch",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "code",
+              "type": "string",
+              "identifier": "2VDt21cq7LCxYfIy5k6H4"
+            },
+            {
+              "property": "title",
+              "type": "string",
+              "identifier": "5YTcwjy6NtCO10cwVTiTf"
+            },
+            {
+              "property": "description",
+              "type": "string",
+              "identifier": "Vmfp_gPPWvn_hR-fkcr3R"
+            },
+            {
+              "property": "includes",
+              "type": "string",
+              "identifier": "tc9fDZIoutnLRL3SarU1n"
+            },
+            {
+              "property": "excludes",
+              "type": "string",
+              "identifier": "Vz7i10-ly1k4iw6fYMzHg"
+            }
+          ],
+          "key": {
+            "properties": [
+              "2VDt21cq7LCxYfIy5k6H4"
+            ],
+            "name": ""
+          }
+        },
+        "n3": {
+          "label": "SubBranch",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "code",
+              "type": "string",
+              "identifier": "8InIH3nglsfrGlflbNWGb"
+            },
+            {
+              "property": "title",
+              "type": "string",
+              "identifier": "lloEEJ16TGnQWi0rHXxy_"
+            },
+            {
+              "property": "description",
+              "type": "string",
+              "identifier": "VUsOz2H0gYBkElzDW4B1S"
+            },
+            {
+              "property": "includes",
+              "type": "string",
+              "identifier": "vK5oJ7L8bzKUFID9pVBj9"
+            },
+            {
+              "property": "excludes",
+              "type": "string",
+              "identifier": "1hTihy_soVjDH4VNpDNmu"
+            }
+          ],
+          "key": {
+            "properties": [
+              "8InIH3nglsfrGlflbNWGb"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "IS_PART_OF",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n0",
+          "properties": []
+        },
+        "n1": {
+          "type": "IS_PART_OF",
+          "sourceNodeSchema": "n2",
+          "targetNodeSchema": "n1",
+          "properties": []
+        },
+        "n2": {
+          "type": "IS_PART_OF",
+          "sourceNodeSchema": "n3",
+          "targetNodeSchema": "n2",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "scian_sector.csv",
+          "mappings": [
+            {
+              "field": "Código"
+            },
+            {
+              "field": "Título"
+            },
+            {
+              "field": "Descripción"
+            },
+            {
+              "field": "Incluye"
+            },
+            {
+              "field": "Excluye"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "scian_subsector.csv",
+          "mappings": [
+            {
+              "field": "Código"
+            },
+            {
+              "field": "Descripción"
+            },
+            {
+              "field": "Incluye"
+            },
+            {
+              "field": "Excluye"
+            }
+          ]
+        },
+        "n2": {
+          "nodeSchema": "n2",
+          "fileSchema": "scian_rama.csv",
+          "mappings": [
+            {
+              "field": "Código"
+            },
+            {
+              "field": "Título"
+            },
+            {
+              "field": "Descripción"
+            },
+            {
+              "field": "Incluye"
+            },
+            {
+              "field": "Excluye"
+            }
+          ]
+        },
+        "n3": {
+          "nodeSchema": "n3",
+          "fileSchema": "scian_subrama.csv",
+          "mappings": [
+            {
+              "field": "Código"
+            },
+            {
+              "field": "Título"
+            },
+            {
+              "field": "Descripción"
+            },
+            {
+              "field": "Incluye"
+            },
+            {
+              "field": "Excluye"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Código"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Código sector"
+            }
+          ],
+          "fileSchema": "scian_subsector.csv"
+        },
+        "n1": {
+          "relationshipSchema": "n1",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Código"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "código subsector"
+            }
+          ],
+          "fileSchema": "scian_rama.csv"
+        },
+        "n2": {
+          "relationshipSchema": "n2",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "Código"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "Código rama"
+            }
+          ],
+          "fileSchema": "scian_subrama.csv"
+        }
+      }
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
