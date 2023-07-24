@@ -1,10 +1,10 @@
-:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_sector.csv' AS line FIELDTERMINATOR ';'
+:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_sector.csv' AS line 
 CALL {
   WITH line
   MERGE (:IndustrySector {identifier: line['Código'], title: line['Título'], description: line['Descripción']})
 } IN TRANSACTIONS OF 500 ROWS
 
-:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_subsector.csv' AS line FIELDTERMINATOR ';'
+:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_subsector.csv' AS line 
 CALL {
   WITH line
   MERGE (:IndustrySubSector {identifier: line['Código'], title: line['Título'], description: line['Descripción']})
@@ -15,7 +15,7 @@ CALL {
       MERGE (a)-[:SUBCLASS_OF]->(b)
 } IN TRANSACTIONS OF 500 ROWS
 
-:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_rama.csv' AS line FIELDTERMINATOR ';'
+:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_rama.csv' AS line 
 CALL {
   WITH line
   MERGE (:IndustryBranch {identifier: line['Código'], title: line['Título'], description: line['Descripción']})
@@ -26,7 +26,7 @@ CALL {
       MERGE (a)-[:SUBCLASS_OF]->(b)
 } IN TRANSACTIONS OF 500 ROWS
 
-:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_subrama.csv' AS line FIELDTERMINATOR ';'
+:auto LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/amr205/Sistema-de-Clasificacion-Industrial-de-America-del-Norte-2018-SCIAN-2018-GraphDatabase-Neo4j/main/scian_subrama.csv' AS line 
 CALL {
   WITH line
   MERGE (:IndustrySubBranch {identifier: line['Código'], title: line['Título'], description: line['Descripción']})
